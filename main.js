@@ -78,15 +78,34 @@ if (document.body.ontouchstart !== undefined) {
 }
 
 var eraserEnable = false
-eraser.onclick = function() {
-    eraserEnable = true;
-    actions.className = 'actions x';
-}
-brush.onclick = function() {
+pen.onclick = function(){
     eraserEnable = false;
-    actions.className = 'actions';
+    pen.classList.add('active');
+    eraser.classList.remove('active');
 }
-
+eraser.onclick = function(){
+    eraserEnable = true;
+    eraser.classList.add('active');
+    pen.classList.remove('active');
+}
+red.onclick = function(){
+    context.strokeStyle = "red";
+    red.classList.add('active');
+    green.classList.remove('active');
+    black.classList.remove('active');
+}
+green.onclick = function(){
+    context.strokeStyle = "green";
+    green.classList.add('active');
+    red.classList.remove('active');
+    black.classList.remove('active');
+}
+black.onclick = function(){
+    context.strokeStyle = "black";
+    black.classList.add('active');
+    red.classList.remove('active');
+    green.classList.remove('active');
+}
 
 function screenWH() {
     var pageWidth = document.documentElement.clientWidth;
@@ -98,7 +117,6 @@ function screenWH() {
 function drawLine(x1, y1, x2, y2) {
     context.beginPath();
     context.moveTo(x1, y1);
-    context.strokeStyle = 'black';
     context.lineWidth = 5;
     context.lineTo(x2, y2);
     context.stroke();

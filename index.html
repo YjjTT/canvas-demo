@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-	<canvas id="xxx">
-		
-	</canvas>
-	<div class="actions" id="actions">
-		<button id="eraser">橡皮擦</button>
-		<button id="brush">画笔</button>
-	</div>
-	<script src="main.js"></script>
+    <canvas id="xxx">
+    </canvas>
+    <div class="actions" id="actions">
+        <svg id="eraser" class="icon" aria-hidden="true">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+        <svg id="pen" class="active icon" aria-hidden="true">
+            <use xlink:href="#icon-pen-"></use>
+        </svg>
+    </div>
+
+    <ol class="colors">
+    	<li id="red" class="red active"></li>
+    	<li id="green" class="green"></li>
+    	<li id="black" class="black"></li>
+    </ol>
+    <script src="main.js"></script>
+    <script src="//at.alicdn.com/t/font_1010436_z9e30okr638.js"></script>
 </body>
+
 </html>
