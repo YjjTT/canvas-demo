@@ -17,6 +17,7 @@ ol, li{
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 .actions {
