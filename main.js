@@ -1,3 +1,6 @@
+// document.body.addEventListener('touchstart', function(eee){
+//     eee.preventDefault();
+// }
 var yyy = document.getElementById('xxx');
 
 screenWH()
