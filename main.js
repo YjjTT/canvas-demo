@@ -109,18 +109,24 @@ red.onclick = function(){
     red.classList.add('active');
     green.classList.remove('active');
     black.classList.remove('active');
+    yellow.classList.remove('active');
+    blue.classList.remove('active');
 }
 green.onclick = function(){
     context.strokeStyle = "green";
     green.classList.add('active');
     red.classList.remove('active');
     black.classList.remove('active');
+    yellow.classList.remove('active');
+    blue.classList.remove('active');
 }
 black.onclick = function(){
     context.strokeStyle = "black";
     black.classList.add('active');
     red.classList.remove('active');
     green.classList.remove('active');
+    yellow.classList.remove('active');
+    blue.classList.remove('active');
 }
 yellow.onclick = function(){
     context.strokeStyle = "yellow";

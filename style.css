@@ -5,11 +5,14 @@
     fill: currentColor;
     overflow: hidden;
 }
-ol, li{
-	list-style: none;
-	margin: 0;
-	padding: 0;
+
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 #xxx {
     background: white;
     display: block;
@@ -42,59 +45,88 @@ body {
     transform: scale(1.2);
 }
 
-.colors{
-	position: fixed;
-	top: 60px;
-	left: 28px;
-}
-.colors > li {
-	width: 20px;
-	height: 20px;
-	margin: 20px 0;
-	border-radius: 50%;
-	box-shadow: 0 0 3px rgba(0,0,0,0.25); 
-	transition: all 0.3s;
-}
-.colors > li.active {
-	box-shadow: 0 0 3px rgba(0,0,0,0.95);
-	transform: scale(1.2);
-
-}
-.colors > li.red{
-	background: red;
-}
-.colors > li.green{
-	background: green;
-}
-.colors > li.black{
-	background: black;
-}
-.colors > li.yellow{
-	background: yellow;
-}
-.colors > li.blue{
-	background: blue;
-}
-.sizes{
-	position: fixed;
-	right: 20px;
-	top: 10px;
-}
-.sizes > li{
-	margin: 20px 0;
-}
-.sizes > .thin{
-	height: 0;
-	width: 30px;
-	border-top: 3px solid black;
-}
-.sizes > .thick{
-	height: 0;
-	width: 30px;
-	border-top: 10px solid black;
+.colors {
+    position: fixed;
+    top: 60px;
+    left: 28px;
 }
 
+.colors>li {
+    width: 20px;
+    height: 20px;
+    margin: 20px 0;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
 
+.colors>li:before,
+.colors>li:after {
+    content: "";
+    height: 14px;
+    width: 3px;
+    border-radius: 5px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
 
+.colors>li::before {
+    height: 8px;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    position: absolute;
+    top: 8px;
+    left: 4px;
+}
 
+.colors>li.active {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
+    transform: scale(1.2);
+}
 
+.colors>li.red {
+    background: red;
+}
+
+.colors>li.green {
+    background: green;
+}
+
+.colors>li.black {
+    background: black;
+}
+
+.colors>li.yellow {
+    background: yellow;
+}
+
+.colors>li.blue {
+    background: blue;
+}
+
+.sizes {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+}
+
+.sizes>li {
+    margin: 20px 0;
+}
+
+.sizes>.thin {
+    height: 0;
+    width: 30px;
+    border-top: 3px solid black;
+}
+
+.sizes>.thick {
+    height: 0;
+    width: 30px;
+    border-top: 10px solid black;
+}
