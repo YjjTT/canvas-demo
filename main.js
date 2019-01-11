@@ -10,6 +10,9 @@ window.onresize = function() {
 }
 
 var context = yyy.getContext('2d');
+context.fillStyle = '#FFFFFF';
+context.fillRect(0, 0, yyy.width, yyy.height);
+context.drawImage(yyy, 0, 0);
 var lineWidth = 3;
 
 var using = false;
