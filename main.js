@@ -10,7 +10,7 @@ window.onresize = function() {
 }
 
 var context = yyy.getContext('2d');
-var lineWidth = 5;
+var lineWidth = 3;
 
 var using = false;
 var lastPoint = { x: undefined, y: undefined };
@@ -122,11 +122,27 @@ black.onclick = function(){
     red.classList.remove('active');
     green.classList.remove('active');
 }
+yellow.onclick = function(){
+    context.strokeStyle = "yellow";
+    yellow.classList.add('active');
+    red.classList.remove('active');
+    green.classList.remove('active');
+    black.classList.remove('active');
+    blue.classList.remove('active');
+}
+blue.onclick = function(){
+    context.strokeStyle = "blue";
+    blue.classList.add('active');
+    red.classList.remove('active');
+    green.classList.remove('active');
+    black.classList.remove('active');
+    yellow.classList.remove('active');
+}
 thin.onclick = function(){
-    lineWidth = 5;
+    lineWidth = 3;
 }
 thick.onclick = function(){
-    lineWidth = 10;
+    lineWidth = 5;
 }
 function screenWH() {
     var pageWidth = document.documentElement.clientWidth;

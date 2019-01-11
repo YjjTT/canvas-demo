@@ -50,7 +50,7 @@ body {
 .colors > li {
 	width: 20px;
 	height: 20px;
-	margin: 10px 0;
+	margin: 20px 0;
 	border-radius: 50%;
 	box-shadow: 0 0 3px rgba(0,0,0,0.25); 
 	transition: all 0.3s;
@@ -69,6 +69,12 @@ body {
 .colors > li.black{
 	background: black;
 }
+.colors > li.yellow{
+	background: yellow;
+}
+.colors > li.blue{
+	background: blue;
+}
 .sizes{
 	position: fixed;
 	right: 20px;
@@ -79,12 +85,12 @@ body {
 }
 .sizes > .thin{
 	height: 0;
-	width: 20px;
+	width: 30px;
 	border-top: 3px solid black;
 }
 .sizes > .thick{
 	height: 0;
-	width: 20px;
+	width: 30px;
 	border-top: 10px solid black;
 }
 
